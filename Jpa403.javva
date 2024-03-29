@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class JPA403 {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // 宣告兩個矩陣
+        int[][] matrixA = new int[2][3];
+        int[][] matrixB = new int[2][3];
+
+        // 輸入矩陣 A 的元素
+        for (int i = 0; i < matrixA.length; i++) {
+            for (int j = 0; j < matrixA[0].length; j++) {
+                System.out.printf("矩陣 A 的第 %d 行第 %d 列元素：", i + 1, j + 1);
+                matrixA[i][j] = scanner.nextInt();
+            }
+        }
+
+        // 輸入矩陣 B 的元素
+        for (int i = 0; i < matrixB.length; i++) {
+            for (int j = 0; j < matrixB[0].length; j++) {
+                System.out.printf("矩陣 B 的第 %d 行第 %d 列元素：", i + 1, j + 1);
+                matrixB[i][j] = scanner.nextInt();
+            }
+        }
+
+        // 計算矩陣 A 與 B 的和
+        int[][] matrixC = new int[2][3];
+        for (int i = 0; i < matrixC.length; i++) {
+            for (int j = 0; j < matrixC[0].length; j++) {
+                matrixC[i][j] = matrixA[i][j] + matrixB[i][j];
+            }
+        }
+
+        // 輸出結果
+        System.out.println();
+        System.out.println("矩陣 A 與 B 的和：");
+        for (int i = 0; i < matrixC.length; i++) {
+            for (int j = 0; j < matrixC[0].length; j++) {
+                System.out.printf("%d ", matrixC[i][j]);
+            }
+            System.out.println();
+        }
+    }
+}
